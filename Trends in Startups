@@ -8,7 +8,8 @@
 
 --Q. What is the highest amount raised by a startup?
 --Q. Edit the query so that it returns the maximum amount of money raised, during ‘Seed’ stage
---SELECT name, MAX(raised) FROM startups WHERE stage like 'Seed';
+--SELECT name, MAX(raised) FROM startups
+  WHERE stage like 'Seed';
 
 --Q. In what year was the oldest company on the list founded?
 --SELECT * FROM startups ORDER BY founded ASC LIMIT 1;
