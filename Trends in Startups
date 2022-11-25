@@ -1,0 +1,30 @@
+--select * from startups;
+
+--Calculate the total number of companies in the table.
+--select count(*) from startups;
+
+--We want to know the total value of all companies in this table.
+--select sum(valuation) as Total_Value from startups;
+
+--Q. What is the highest amount raised by a startup?
+--Q. Edit the query so that it returns the maximum amount of money raised, during ‘Seed’ stage
+--SELECT name, MAX(raised) FROM startups WHERE stage like 'Seed';
+
+--Q. In what year was the oldest company on the list founded?
+--SELECT * FROM startups ORDER BY founded ASC LIMIT 1;
+
+--Q. Return the average valuation.
+--SELECT AVG(valuation) FROM startups;
+
+
+--Q.Return the average valuation, in each category. a.Round the averages to two decimal places. b.Lastly, order the list from highest averages to lowest.
+--SELECT category, ROUND(AVG(valuation),2) AS AVG_Value from startups GROUP BY category ORDER BY valuation DESC;
+
+
+--Q First, return the name of each category with the total number of companies that belong to it. a.filter the result to only include categories that have more than three companies in them & what are the most competitive markets?.
+--select category, Count(*) as total_COunt from startups group by category HAVING COUNT(*)>3 ORDER BY total_COunt DESC;
+
+
+
+--Q. What is the average size of a startup in each location, with average sizes above 500?
+--select location, AVG(employees) from startups group by location having AVG(employees)>500;
